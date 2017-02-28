@@ -1,4 +1,4 @@
-  //Module pattern
+  //Module pattern - It looks great!
   const movieDatabase = (() => {
   let movies = [
     {
@@ -49,11 +49,25 @@
     this.ratings = [ratings];
  },
  	//Arrow function to return the value to the array
- 	getMovie:() => {return movies;
-  },
+ 	getMovie:() => {return movies;},
+
     // Add new movies with push
-  addMovie:(movie) => {movies.push(movie);
+  addMovie:(movie) => {movies.push(movie);},
+  //Function that will filter old/new movies
+/*
+  function getMoviesByYear(year) {
+    return movieArray.filter(function (title) {
+      if (year > 2000) {
+      return title.year == year;
+      }
+    })
   },
+  //Going to become a rating calc, will show before and after amount
+  var sumRating = movies.reduce((sum, movies) => sum + movies.ratings, 0)
+  var sumRating = 0
+  for (var i = 0; i < movies.length; i++) {
+    sumRating += movies[i].ratings
+  },*/
  	// Adds movie based on input from user
  	userInputForm:() => {
  		var addTitle = document.getElementById("title").value;
@@ -65,7 +79,7 @@
  		movieDatabase.addMovie(inputMovie);
  		movieDatabase.movieHtmlForm();
  	},
- 	//This code lits all movies from the array.
+ 	//Generates a <div> and <p>tags to display movies
  	movieHtmlForm: () => {
     var movieBlock = "";
  		var movieDiv = document.getElementsByClassName('movieDiv')[0];
@@ -77,22 +91,24 @@
  			<p>Ratings: ${movies[i].ratings}</p>
  			</div>`;
  		}
- 		movieDiv.innerHTML = movieBlock;
+ 		movieDiv.innerHTML += movieBlock;
  	}
  };
 })();
 //movieDatabase.movieHtmlForm(); Display movies on start up
+//button for adding new movies
 document.getElementById("movie-btn").addEventListener("click",movieDatabase.userInputForm);
-//console.log(movieDatabase.movieHtmlForm());
+
 
 
 /* Stuff to do
-Movie(title, year, genres) CHECK!******
+Movie(title, year, genres)******
 rateMovie(movie, rating)
 getTopRatedMovie()
 getWorstRatedMovie()
-getMoviesThisYear(year)
+getMoviesThisYear(year)******
 getMoviesByGenre(genres)
-const rateingCalc = movies
+
+const ratingCalc = movies
 .reduce(movies => (prev || 0) + value);
 */
