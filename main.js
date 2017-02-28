@@ -41,7 +41,7 @@
   ];
 
   return {
-    // Movie constructor
+    //Constructor
     movie: function(title, year, genres, ratings){
     this.title = title;
     this.year = year;
@@ -65,7 +65,8 @@
  		movieDatabase.addMovie(inputMovie);
  		movieDatabase.movieHtmlForm();
  	},
- 	//Generates a <div> and <p>tags to display movies
+ 	/*Generates a <div> and <p>tags to display movies, looping through 
+    the array movies*/
  	movieHtmlForm: () => {
     var movieBlock = "";
  		var movieDiv = document.getElementsByClassName('movieDiv')[0];
@@ -84,23 +85,10 @@
 //movieDatabase.movieHtmlForm(); Display movies on start up
 //button for adding new movies
 document.getElementById("movie-btn").addEventListener("click",movieDatabase.userInputForm);
-
-
-
-/* Stuff to do
-Movie(title, year, genres)******
-rateMovie(movie, rating)********
-getTopRatedMovie()
-getWorstRatedMovie()
-getMoviesThisYear(year)******
-getMoviesByGenre(genres)******
-
-useful: .reduce .filter .map
-
+/*
 const ratingCalc = movies
 .reduce(movies => (prev || 0) + value);
-*/
-/*
+
   getTopRatedMovie()
   getWorstRatedMovie()
 
@@ -118,4 +106,19 @@ const ratingCalc = movies
   var sumRating = 0
   for (var i = 0; i < movies.length; i++) {
     sumRating += movies[i].ratings
-  },*/
+  },
+      function getMoviesByGenre(genres) {
+
+    };
+
+    //remove genres
+    function removeGenres(para1, para2) {
+
+    };
+
+    //add genres
+    function addGenres(title, genres) {
+
+    };
+
+  */
