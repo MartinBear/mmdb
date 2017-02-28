@@ -53,25 +53,7 @@
 
     // Add new movies with push
   addMovie:(movie) => {movies.push(movie);},
-/*
-  getTopRatedMovie()
-  getWorstRatedMovie()
 
-  //Function that will filter old/new movies
-
-  function getMoviesByYear(year) {
-    return movieArray.filter(function (title) {
-      if (year > otheryear) {
-      return title.year == year;
-      }
-    })
-  },
-  //Going to become a rating calc, will show before and after amount
-  var sumRating = movies.reduce((sum, movies) => sum + movies.ratings, 0)
-  var sumRating = 0
-  for (var i = 0; i < movies.length; i++) {
-    sumRating += movies[i].ratings
-  },*/
  	// Adds movie based on input from user
  	userInputForm:() => {
  		var addTitle = document.getElementById("title").value;
@@ -111,10 +93,29 @@ rateMovie(movie, rating)********
 getTopRatedMovie()
 getWorstRatedMovie()
 getMoviesThisYear(year)******
-getMoviesByGenre(genres)
+getMoviesByGenre(genres)******
 
 useful: .reduce .filter .map
 
 const ratingCalc = movies
 .reduce(movies => (prev || 0) + value);
 */
+/*
+  getTopRatedMovie()
+  getWorstRatedMovie()
+
+  //Function that will filter old/new movies
+
+  function getMoviesByYear(year) {
+    return movieArray.filter(function (title) {
+      if (year > otheryear) {
+      return title.year == year;
+      }
+    })
+  },
+  //Going to become a rating calc, will show before and after amount
+  var sumRating = movies.reduce((sum, movies) => sum + movies.ratings, 0)
+  var sumRating = 0
+  for (var i = 0; i < movies.length; i++) {
+    sumRating += movies[i].ratings
+  },*/
