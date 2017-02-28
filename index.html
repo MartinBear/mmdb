@@ -11,13 +11,13 @@
   <body>
       <nav class="quicklink">
       <ul>
-        <li><a href="#">All Movies</a>
+        <li><a id="allMovies" href="#" onclick="movieDatabase.movieHtmlForm()">All Movies</a>
         <li><a href="#">Sucky Rateing</a>
         <li><a href="#">Good Rateing</a>
       </ul>
       </nav>
 
-      <h1>Best MovieDatabase</h1>
+      <h1>Brofessional MovieDatabase</h1>
       <main>
 
       <form class="mdb-form" action="index.html" method="post">
@@ -30,9 +30,10 @@
         <label for="ratings">Ratings</label>
         <input id="ratings"type="text" name="ratings" value="">
         <br>
-        <button id="movie-btn" type="button" name="button">Show me!</button>
+        <button id="movie-btn" type="button" name="button">Add!</button>
       </form>
       <div class="movieDiv">
+      <h1 id="h1m">Movies</h1>
 
       </div>
       </main>

@@ -49,43 +49,41 @@
     this.ratings = [ratings];
  },
  	//Arrow function to return the value to the array
- 	getMovie:() => { return movies;}
+ 	getMovie:() => {return movies;
+  },
     // Add new movies with push
-    addMovie:() => {movies.push(movie);
- },
+  addMovie:(movie) => {movies.push(movie);
+  },
  	// Adds movie based on input from user
  	userInputForm:() => {
  		var addTitle = document.getElementById("title").value;
  		var addYear = document.getElementById("year").value;
- 		var addGeners = document.getElementById("genres").value;
+ 		var addGenres = document.getElementById("genres").value;
  		var addRatings = document.getElementById("ratings").value;
 
  		var inputMovie = new movieDatabase.movie(addTitle,addYear,addGenres,addRatings);
- 		movieDatabase.addMovie(userInputForm);
+ 		movieDatabase.addMovie(inputMovie);
  		movieDatabase.movieHtmlForm();
- 		console.log(movies);
-
  	},
  	//This code lits all movies from the array.
  	movieHtmlForm: () => {
+    var movieBlock = "";
  		var movieDiv = document.getElementsByClassName('movieDiv')[0];
- 		var movieBlock = "";
  		for (let i = 0; i < movies.length; i++) {
-
- 			var movieBlock = `<div class="movieDiv">
+ 			movieBlock += `<div class="movieDiv">
  			<p>Title: ${movies[i].title}</p>
  			<p>Release: ${movies[i].year}</p>
  			<p>Genres: ${movies[i].genres}</p>
  			<p>Ratings: ${movies[i].ratings}</p>
  			</div>`;
  		}
- 		movieDiv.innerHTML += movieBlock;
+ 		movieDiv.innerHTML = movieBlock;
  	}
  };
 })();
-movieDatabase.movieHtmlForm();
+//movieDatabase.movieHtmlForm(); Display movies on start up
 document.getElementById("movie-btn").addEventListener("click",movieDatabase.userInputForm);
-console.log(movieDatabase.movieHtmlForm());
+//console.log(movieDatabase.movieHtmlForm());
 
 
 /* Stuff to do
