@@ -53,11 +53,15 @@
 
     // Add new movies with push
   addMovie:(movie) => {movies.push(movie);},
-  //Function that will filter old/new movies
 /*
+  getTopRatedMovie()
+  getWorstRatedMovie()
+
+  //Function that will filter old/new movies
+
   function getMoviesByYear(year) {
     return movieArray.filter(function (title) {
-      if (year > 2000) {
+      if (year > otheryear) {
       return title.year == year;
       }
     })
@@ -103,11 +107,13 @@ document.getElementById("movie-btn").addEventListener("click",movieDatabase.user
 
 /* Stuff to do
 Movie(title, year, genres)******
-rateMovie(movie, rating)
+rateMovie(movie, rating)********
 getTopRatedMovie()
 getWorstRatedMovie()
 getMoviesThisYear(year)******
 getMoviesByGenre(genres)
+
+useful: .reduce .filter .map
 
 const ratingCalc = movies
 .reduce(movies => (prev || 0) + value);
